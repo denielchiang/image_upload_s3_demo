@@ -10,6 +10,16 @@ use Mix.Config
 config :image_upload_s3_demo,
   ecto_repos: [ImageUploadS3Demo.Repo]
 
+config :ex_aws,
+  access_key_id: "YOUR_ACCESS_KEY",
+  secret_access_key: "YOUR_SECRET_KEY",
+  region: "ap-northeast-1",
+  s3: [
+    scheme: "https://",
+    host: "s3-ap-northeast-1.amazonaws.com",
+    region: "ap-northeast-1"
+  ]
+
 # Configures the endpoint
 config :image_upload_s3_demo, ImageUploadS3DemoWeb.Endpoint,
   url: [host: "localhost"],

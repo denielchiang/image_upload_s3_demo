@@ -9,6 +9,12 @@ config :image_upload_s3_demo, ImageUploadS3Demo.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+config :arc,
+  asset_host: "https://image-upload-s3-demo.s3-ap-northeast-1.amazonaws.com",
+  storage: Arc.Storage.S3,
+  virtual_host: true,
+  bucket: "image-upload-s3-demo"
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
