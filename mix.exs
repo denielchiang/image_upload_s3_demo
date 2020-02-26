@@ -33,6 +33,12 @@ defmodule ImageUploadS3Demo.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      # Upload image to S3
+      {:arc, "~> 0.11.0"},
+      {:ex_aws, "~> 2.1"},
+      {:ex_aws_s3, "~> 2.0"},
+      {:hackney, "~> 1.9"},
+      {:sweet_xml, "~> 0.6"},
       {:phoenix, "~> 1.4.12"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
