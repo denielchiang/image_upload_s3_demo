@@ -101,4 +101,6 @@ defmodule ImageUploadS3Demo.ImageManager do
   def change_image(%Image{} = image) do
     Image.changeset(image, %{})
   end
+
+  def change_image, do: %Image{} |> Image.changeset(%{})
 end
