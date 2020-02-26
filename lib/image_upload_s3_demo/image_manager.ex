@@ -7,6 +7,7 @@ defmodule ImageUploadS3Demo.ImageManager do
   alias ImageUploadS3Demo.Repo
 
   alias ImageUploadS3Demo.ImageManager.Image
+  alias ImageUploadS3Demo.ImageUploader
 
   @doc """
   Returns the list of images.
@@ -50,8 +51,16 @@ defmodule ImageUploadS3Demo.ImageManager do
 
   """
   def create_image(attrs \\ %{}) do
+    user = %{id: 1}
+
+    {:ok, filename} =
+      {attrs, user}
+      |> ImageUploader.store()
+
+    url = ImageUploader.url({filename, user})
+
     %Image{}
-    |> Image.changeset(attrs)
+    |> Image.changeset(%{path: url})
     |> Repo.insert()
   end
 

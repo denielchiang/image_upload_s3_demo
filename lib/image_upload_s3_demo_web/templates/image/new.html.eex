@@ -1,0 +1,12 @@
+<h2>上傳新圖片</h2>
+<%= form_for @changeset, Routes.image_path(@conn, :create),
+[multipart: true], fn f -> %>
+<div class="form-group\">
+  <label>請選擇一張圖片</label>
+  <%= file_input f, :path %>
+  <%= error_tag f, :path %>
+</div>
+<div class=”form-group”>
+  <%= submit "上傳", class: "btn btn-default" %>
+</div>
+<% end %>
