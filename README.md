@@ -1,4 +1,6 @@
 # Elixir / Phoenix - 上傳圖片到S3 (with Arc / ExAws)
+  [![HitCount](http://hits.dwyl.com/denielchiang/denielchiang/image_upload_s3_demo.svg)](http://hits.dwyl.com/denielchiang/denielchiang/image_upload_s3_demo)
+
 
 當我們做Web Apps的時候，很常會有圖片上傳的功能，我們上一篇有介紹過上傳到App Sever，這一篇來講比較real world的上傳方法。
 
